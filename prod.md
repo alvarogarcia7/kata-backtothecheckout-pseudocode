@@ -1,7 +1,8 @@
-Cart {
+Cart (strategy) {
   price(products) {
-    if(products.length === 3) {
-      return 1;
+    let discounted = strategy.apply(products);
+    if(discounted.isPresent()){
+      return discounted.get();
     }
     return products.length*products[0].price();
   }
@@ -12,3 +13,4 @@ Product(name, price){
     return price
   }
 }
+
