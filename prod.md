@@ -1,6 +1,6 @@
-Cart (strategy) {
+Cart (discount) {
   price(products) {
-    let discounted = strategy.apply(products);
+    let discounted = discount.apply(products);
     if(discounted.isPresent()){
       return discounted.get();
     }
