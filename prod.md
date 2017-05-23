@@ -8,9 +8,12 @@ Cart (discount) {
   }
 }
 
-Product(name, price){
+Product(name, pricingStrategy){
   price() {
-    return price
+    return pricingStrategy();
   }
 }
 
+PricingStrategy(fn) {
+  return fn
+}
