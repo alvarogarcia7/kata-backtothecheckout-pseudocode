@@ -1,5 +1,5 @@
 Cart {
-  price() {
-    return 0.65;
+  price(products) {
+    return products.length*0.65;
   }
 }
