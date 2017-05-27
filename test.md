@@ -6,3 +6,4 @@ cart.price([beans, beans]) => 2*0.65
 cart.price([beans, beans, beans]) => 1 // Not 3*0.65
 
 cart.price([beansByWeight]) => 2.0
+cart.price([beansByWeight, beansByWeight]) => 4.0
